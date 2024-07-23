@@ -79,6 +79,7 @@
                   type="text"
                   id="last"
                   name="last"
+                  minlength="2"
                 /><br>
               </div>
               <div
@@ -104,11 +105,16 @@
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input 
+                  type="number" 
+                  class="text-control" 
+                  id="quantity" 
+                  name="quantity" 
+                  min="0" 
+                  max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
-              <div
-                class="formData">
+              <div class="formData">
                 <input
                   class="checkbox-input"
                   type="radio"
@@ -175,10 +181,12 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
+                <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
               </div>
 
               <div
                 class="formData">
+                <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
                 <input
                   class="checkbox-input"
                   type="checkbox"
@@ -189,6 +197,8 @@
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
+                
+
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
