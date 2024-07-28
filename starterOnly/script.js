@@ -91,6 +91,11 @@ function validate(event) {
   // Submit if valid
   if (isValid) {
     alert("Merci ! Votre réservation a été reçue.");
-    form.submit();
+    const ok = document.createElement("h2")
+    ok.innerHTML="Merci ! votre reservation été reçue."
+    const modalbody = document.querySelector(".modal-body")
+    modalbody.innerHTML= ""
+    modalbody.appendChild(ok)
   }
+
 }
