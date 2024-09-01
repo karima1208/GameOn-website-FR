@@ -88,14 +88,43 @@ function validate(event) {
     terms.parentNode.setAttribute("data-error-visible", "false");
   }
 
-  // Submit if valid
-  if (isValid) {
-    alert("Merci ! Votre réservation a été reçue.");
-    const ok = document.createElement("h2")
-    ok.innerHTML="Merci ! votre reservation été reçue."
-    const modalbody = document.querySelector(".modal-body")
-    modalbody.innerHTML= ""
-    modalbody.appendChild(ok)
-  }
+ // Si le formulaire est valide, affiche le message de confirmation
+ if (isValid) {
+  const modalBody = document.querySelector(".modal-body");
 
+  // Vide le contenu existant de la modale
+  modalBody.innerHTML = "";
+
+  // Crée un élément pour le message de confirmation
+  const confirmationMessage = document.createElement("h2");
+  confirmationMessage.innerHTML = "Merci ! Votre réservation a été reçue.";
+  confirmationMessage.style.textAlign = "center";
+  confirmationMessage.style.marginTop = "280px"; // Ajoute une marge en haut
+
+  // Crée un bouton "Fermer"
+  const closeButton = document.createElement("button");
+  closeButton.innerHTML = "Fermer";
+  closeButton.style.marginTop = "20px";
+  closeButton.style.padding = "10px 20px";
+  closeButton.style.backgroundColor = "#fe142f"; // couleur du bouton
+  closeButton.style.color = "#fff";
+  closeButton.style.border = "none";
+  closeButton.style.cursor = "pointer";
+  closeButton.style.borderRadius = "5px";
+
+  // Fonction pour fermer la modale au clic sur le bouton "Fermer"
+  closeButton.addEventListener("click", closeModal);
+
+     // Ajuste la taille du message pour qu'il prenne tout l'espace
+     modalBody.style.display = "flex";
+     modalBody.style.flexDirection = "column";
+     modalBody.style.justifyContent = "center";
+     modalBody.style.alignItems = "center";
+     modalBody.style.height = "700px";
+     modalBody.style.width = "100%";
+ 
+     // Ajoute le message de confirmation et le bouton à la modale
+     modalBody.appendChild(confirmationMessage);
+     modalBody.appendChild(closeButton);
+   }
 }

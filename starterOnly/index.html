@@ -62,6 +62,7 @@
             >
               <div
                 class="formData">
+                <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
                 <label>Prénom</label><br>
                 <input
                   class="text-control"
@@ -73,6 +74,7 @@
               </div>
               <div
                 class="formData">
+                <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
                 <label>Nom</label><br>
                 <input
                   class="text-control"
@@ -116,15 +118,12 @@
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div class="formData">
                 
-                  <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
-                
-                  <input
+                <input
                   class="checkbox-input"
                   type="radio"
                   id="location1"
                   name="location"
                   value="New York"
-                  checked="checked"
                 />
                 <label class="checkbox-label" for="location1">
                   <span class="checkbox-icon"></span>
@@ -185,7 +184,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 >
-                <p data-error="" data-error-visible="false"></p> <!-- Pour afficher les messages d'erreur -->
+                
               </div>
 
               <div
