@@ -127,5 +127,5 @@ function validate(event) {
      modalBody.appendChild(confirmationMessage);
      modalBody.appendChild(closeButton);
    }
-   form.reset(); // Réinitialise le formulaire
+   
 }
