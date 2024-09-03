@@ -71,12 +71,13 @@ function validate(event) {
   }
 
   // Location validation
-  if (!location) {
-    document.querySelector(".formData p").setAttribute("data-error", "Vous devez choisir une option.");
-    document.querySelector(".formData p").setAttribute("data-error-visible", "true");
+  console.log(location)
+  if (location == null) {
+    document.querySelector(".errorlocation").setAttribute("data-error", "Vous devez choisir une option.");
+    document.querySelector(".errorlocation").setAttribute("data-error-visible", "true");
     isValid = false;
   } else {
-    document.querySelector(".formData p").setAttribute("data-error-visible", "false");
+    document.querySelector(".errorlocation").setAttribute("data-error-visible", "false");
   }
 
   // Terms validation
@@ -113,7 +114,8 @@ function validate(event) {
   closeButton.style.borderRadius = "5px";
 
   // Fonction pour fermer la modale au clic sur le bouton "Fermer"
-  closeButton.addEventListener("click", closeModal);
+  closeButton.addEventListener("click", function(){window.location.reload()});
+
 
      // Ajuste la taille du message pour qu'il prenne tout l'espace
      modalBody.style.display = "flex";
